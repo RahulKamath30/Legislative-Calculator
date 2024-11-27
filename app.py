@@ -1,5 +1,11 @@
 import streamlit as st
-import pandas as pd
+from country_manager import CountryDataManager, LegislativeCalculatorEnhanced
+
+def main():
+    # Initialize the data manager with the JSON file path
+    data_manager = CountryDataManager('data/factbook.json')
+    calculator = LegislativeCalculatorEnhanced(data_manager)
+
 import plotly.graph_objects as go
 from datetime import datetime
 import base64
